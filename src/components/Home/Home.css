@@ -26,7 +26,7 @@ body{
     animation-duration: 3s;
 }
 .background-image:hover{
-    transform: scaleX(.8);
+    transform: scaleX(.9);
     filter: drop-shadow( -5px 10px 15px rgba(82, 81, 81, 0.6));
 }
 .main-title{
@@ -199,6 +199,6 @@ body{
 /* ANIMACIJE */
 
 @keyframes action {
-    to{transform: scaleX(.8);
+    to{transform: scaleX(.9);
     filter: drop-shadow( -5px 10px 15px rgba(82, 81, 81, 0.6));}
 }

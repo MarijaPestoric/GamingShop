@@ -11,7 +11,7 @@ export default function Home() {
                 <Row style={{ textAlign: 'left', paddingTop: '5rem' }} className="main-container">
                     <Col>
                         <h1 className="main-title">Gaming Empire</h1>
-                        <p className="main-paragraph">Lorem ipsum dolor sit amet, elit amet consectetur adipiscing elit</p>
+                        <p className="main-paragraph"> a wide assortment to fit every type of gamer.</p>
                         <div className="mb-2 buttons">
                             <Button className="btn-shop" variant="dark" size="lg">
                                 SHOP NOW
