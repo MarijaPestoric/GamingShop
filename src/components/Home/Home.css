@@ -22,11 +22,12 @@ body{
     position: relative;
     filter: drop-shadow( -15px 10px 15px rgba(22, 22, 22, 0.5));
     transition-duration: 2s;
+    animation-name: action;
+    animation-duration: 3s;
 }
 .background-image:hover{
-    transform: scaleX(.7);
+    transform: scaleX(.8);
     filter: drop-shadow( -5px 10px 15px rgba(82, 81, 81, 0.6));
-
 }
 .main-title{
     font-size: 4rem;
@@ -193,4 +194,11 @@ body{
     font-size: 16px;
     padding: 0;
     margin-bottom: 4rem;
+}
+
+/* ANIMACIJE */
+
+@keyframes action {
+    to{transform: scaleX(.8);
+    filter: drop-shadow( -5px 10px 15px rgba(82, 81, 81, 0.6));}
 }
