@@ -19,7 +19,7 @@ function Header() {
                             <Nav.Link href="#" className='main-navlink px-4'>About</Nav.Link>
                             <Nav.Link href="#" className='main-navlink px-4'>Contact</Nav.Link>
                         </Nav>
-                        <Nav>
+                        <Nav className='search-acc-cart'>
                         <Nav.Link href="#" >
                             <img src={SearchIcon} alt='' width='32px' className='px-1'/>
                         </Nav.Link>

@@ -7,9 +7,9 @@ import './Home.css'
 export default function Home() {
     return (
         <>
-            <Container style={{ overflow: 'hidden', margin: '0', minWidth: '100%' }} >
+            <Container style={{ overflow: 'hidden', margin: '0', minWidth: '100%' }} className='home-container'>
                 <Row style={{ textAlign: 'left', paddingTop: '5rem' }} className="main-container">
-                    <Col>
+                    <Col lg="6" md="12">
                         <h1 className="main-title">Gaming Empire</h1>
                         <p className="main-paragraph"> a wide assortment to fit every type of gamer.</p>
                         <div className="mb-2 buttons">
@@ -21,7 +21,7 @@ export default function Home() {
                             </Button>
                         </div>
                     </Col>
-                    <Col>
+                    <Col lg="6" md="12" >
                         <img className="background-image" src={Background} alt=""></img>
                     </Col>
                 </Row>
@@ -29,32 +29,31 @@ export default function Home() {
                     <hr className="hr-number"></hr> 01.
                     <h2 className='new-in-title'>New in shop.</h2>
                     <Row className="mx-auto">
-                        <Col className='new-in-container__img '> <img src={Sample} width='100%'></img></Col>
-                        <Col className='new-in-container__img'> <img src={Sample} width='100%'></img></Col>
-                        <Col className='new-in-container__img'> <img src={Sample} width='100%'></img></Col>
-                    </Row>
-                    <Row className="mx-auto" >
-                        <Col className='new-in-container__img first'>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
+                        <Col className='new-in-container__img first' lg='4' md='6' sm='12'>
                             Lorem ipsum dolor sit amet, elit amet consectetur adipiscing elit.
                             Lorem ipsum dolor sit amet, elit amet consectetur adipiscing elit.
                             <Button className="see-all-btn" variant="dark" size="lg">
                                 See all <img src={Arrow} className='arrow-for-btn' width='20px'></img>
                             </Button>
                         </Col>
-                        <Col className='new-in-container__img'> <img src={Sample} width='100%'></img></Col>
-                        <Col className='new-in-container__img'> <img src={Sample} width='100%'></img></Col>
                     </Row>
                 </Row>
                 <Row className="newsletter">
-                    <hr className="hr-number-2"></hr><p>02.</p>
-                    <h2 className='newsletter-title'>Let's stay in touch.</h2>
-                    <p className="newsletter-paragraph">Join our newslatter so that we reach out to you <br/> with our best news and offers.</p>
                     <Row>
-                        <Col style={{textAlign: 'left'}}>
+                        <hr className="hr-number-2"></hr><p>02.</p>
+                        <h2 className='newsletter-title'>Let's stay in touch.</h2>
+                        <p className="newsletter-paragraph">Join our newslatter so that we reach out to you <br /> with our best news and offers.</p>
+                    </Row>
+                    <Row>
+                        <Col style={{ textAlign: 'left' }}>
                             <p className="newsletter-label">Enter your email here:</p>
                             <form>
                                 <input type='text' className="newsletter-input">
-
                                 </input>
                                 <button type="submit" className="newsletter-button">Submit</button>
                             </form>

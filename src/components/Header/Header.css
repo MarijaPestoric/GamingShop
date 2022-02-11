@@ -4,3 +4,24 @@
     color: #080809 !important;
     text-shadow: 2px #080809;
 }
+
+.search-acc-cart{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+}
+/* MOBILE */
+@media screen and (max-width: 767px) { /*ako je 767 ili manje */
+    .search-acc-cart{
+        margin-top: 2rem;
+    }
+}
+ /* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
+    .search-acc-cart{
+        margin-top: 1rem;
+    }
+    .search-acc-cart > .nav-link{
+        margin: .5rem;
+    }
+}

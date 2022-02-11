@@ -1,3 +1,23 @@
-.nav-link{
+.footer-nav{
     color: #EDF2F4 !important;
 }
+/* MOBILE */
+@media screen and (max-width: 767px) { /*ako je 767 ili manje */
+    .footer-container{
+        font-size: 14px;
+        padding: 2rem !important;
+    }
+    .footer-navbar{
+        text-align: left !important;
+        margin-top: 1rem !important;
+        padding-left: 0 !important;
+    }
+}
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
+    .footer-container{
+        font-size: 16px;
+        padding: 2rem !important;
+    }
+}
+
