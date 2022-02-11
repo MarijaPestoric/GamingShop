@@ -1,5 +1,40 @@
+import { Container, Navbar, Nav } from 'react-bootstrap'
+import '../Home/Home.css'
+import './Header.css'
+import AccountIcon from '../images/account.png'
+import SearchIcon from '../images/search.png'
+import CartIcon from '../images/bag.png'
+import Logo from '../images/logo.png'
 function Header() {
-    return ( <div>Header</div> );
+    return (
+        <>
+            <Navbar collapseOnSelect expand="lg" style={{backgroundColor: '#EDF2F4'}}>
+                <Container>
+                    <Navbar.Brand href="#home"> <img src={Logo} alt='logo' width='200px'></img> </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="m-auto" style={{margin: '0'}}>
+                            <Nav.Link href="#" className='main-navlink px-4'>Home</Nav.Link>
+                            <Nav.Link href="#" className='main-navlink px-4'>Products</Nav.Link>
+                            <Nav.Link href="#" className='main-navlink px-4'>About</Nav.Link>
+                            <Nav.Link href="#" className='main-navlink px-4'>Contact</Nav.Link>
+                        </Nav>
+                        <Nav>
+                        <Nav.Link href="#" >
+                            <img src={SearchIcon} alt='' width='32px' className='px-1'/>
+                        </Nav.Link>
+                        <Nav.Link href="#" >
+                            <img src={AccountIcon} alt='' width='32px' className='px-1'/>
+                        </Nav.Link>
+                        <Nav.Link href="#" >
+                            <img src={CartIcon} alt='' width='32px' className='px-1'/>
+                        </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+        </>
+    );
 }
 
 export default Header;
