@@ -27,8 +27,8 @@ export default function Home() {
                 </Row>
                 <Row className="new-in-container">
                     <hr className="hr-number"></hr> 01.
-                    <h2 className='new-in-title'>New in shop.</h2>
-                    <Row className="mx-auto">
+                    <h2 className='title'>New in shop.</h2>
+                    <Row className="mx-auto" style={{marginTop: '2rem'}}>
                         <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
                         <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
                         <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} width='100%'></img></Col>
@@ -45,8 +45,11 @@ export default function Home() {
                 </Row>
                 <Row className="newsletter">
                     <Row>
-                        <hr className="hr-number-2"></hr><p>02.</p>
-                        <h2 className='newsletter-title'>Let's stay in touch.</h2>
+                        <Col>
+                            <p className="number-2">02.</p>
+                            <hr className="hr-number-2"></hr>
+                        </Col>
+                        <h2 className='title'>Let's stay in touch.</h2>
                         <p className="newsletter-paragraph">Join our newslatter so that we reach out to you <br /> with our best news and offers.</p>
                     </Row>
                     <Row>
