@@ -107,13 +107,6 @@ body{
     height: 100%;
 }
 
-.new-in-title{
-    padding: 0;
-    margin: 2rem 0;
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-
 .new-in-container__img{
     margin-bottom: 2rem;
     border-radius: 20px;
@@ -153,7 +146,7 @@ body{
     position: relative;
 }
 
-.newsletter-title{
+.title{
     padding: 0;
     margin: 2rem 0 0 0;
     font-size: 2.5rem;
@@ -163,10 +156,18 @@ body{
     width: 3rem;
     height: 2px !important;
     border: none;
-    position: absolute;
+    position: relative;
+    float: right;
+    bottom: 2px;
     background-color: var(--dark);
-    opacity: 1;
-    margin: 0 .5rem 0 0;
+    opacity: .8;
+    margin-right: 3px;
+}
+
+.number-2{
+    position: relative;
+    float: right;
+
 }
 
 .newsletter-label{
@@ -177,7 +178,7 @@ body{
     margin-top: 1rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid #080809;
+    border-bottom: 2px solid #080809ce;
     background-color: transparent;
     font-size: 16px;
 }
@@ -223,7 +224,7 @@ body{
     .see-all-btn{
         margin-top: 2rem;
     }
-    .new-in-title{
+    .title{
         font-size: 1.5rem;
     }
     .newsletter-input{
