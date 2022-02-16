@@ -2,8 +2,8 @@
     background-color: var(--bright);
     padding: 1rem 7rem;
     min-height: 100% !important;
-    border-radius: 10px;
-    font-size: 16px;
+    font-size: 14px;
+    position: relative;
 }
 
 .pro-sidebar{
@@ -34,11 +34,20 @@
 
 .dashboard-summary-title{
     font-weight: 600;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
+.dashboard-info-container{
+    max-height: 100vh;
+    overflow-y: scroll;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+}
+#dashboard-customers{
+    margin-top: 5rem;
+}
 /* RESPONSIVE */
 
 /* MOBILE */
@@ -64,7 +73,8 @@
     .chart-container{
         width: 22rem;
     }
-}/* TABLETS */
+}
+/* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
     .dashboard-container{
         padding: 0 !important;
