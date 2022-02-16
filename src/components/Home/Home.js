@@ -2,7 +2,6 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Background from '../images/shutterstock_1430260730-removebg-preview.png';
 import Sample from '../images/sample.jpg'
 import Arrow from '../images/next.png'
-// import SearchIcon from '../images/'
 import './Home.css'
 export default function Home() {
     return (

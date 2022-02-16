@@ -1,0 +1,86 @@
+.dashboard-container{
+    background-color: var(--bright);
+    padding: 1rem 7rem;
+    min-height: 100% !important;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.pro-sidebar{
+    color: var(--bright);
+    height: 100vh;
+}
+
+.pro-sidebar, .pro-sidebar-inner, .pro-sidebar-layout {
+    border-radius: 10px 0 0 10px;
+    background-color: var(--dark);
+}
+
+.sidebar-title{
+    padding: 3rem 1.5rem;
+}
+
+.quantity-dashboard{
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.chart-container{
+    margin-top: 2rem;
+    width: 26rem;
+    height: 24rem;
+    margin-bottom: 3rem;
+}
+
+.dashboard-summary-title{
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media screen and (max-width: 767px) { /*ako je 767 ili manje */
+    .dashboard-container{
+        padding: 0 !important;
+        width: auto;
+    }
+    .pro-sidebar{
+        width: 100%;
+        height: fit-content;
+    }
+    .pro-sidebar, .pro-sidebar-inner, .pro-sidebar-layout {
+        border-radius: 0;
+    }
+    .sidebar-title{
+        margin: 0;
+        padding: 0.5rem 1rem;
+    }
+    .dashboard-summary-title{
+        margin-bottom: 1.5rem;
+    }
+    .chart-container{
+        width: 22rem;
+    }
+}/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
+    .dashboard-container{
+        padding: 0 !important;
+        width: auto;
+    }
+    .pro-sidebar{
+        width: 100%;
+        height: fit-content;
+    }
+    .pro-sidebar, .pro-sidebar-inner, .pro-sidebar-layout {
+        border-radius: 0;
+    }
+    .sidebar-title{
+        margin: 0;
+        padding: 1.5rem 1rem;
+        font-size: 2rem;
+    }
+
+}

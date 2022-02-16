@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
+import Dashboard from './components/Dashboard/Dashboard';
 function App() {
   return (
     <BrowserRouter>
@@ -11,6 +12,7 @@ function App() {
                 <Header />
                 <Route exact path="/" component={Home}></Route>
                 <Route exact path='/shopping-cart' component={ShoppingCart}></Route>
+                <Route exact path='/dashboard' component={Dashboard}></Route>
                 <Footer />
             </div>
         </BrowserRouter>

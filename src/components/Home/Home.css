@@ -151,6 +151,7 @@ body{
     margin: 2rem 0 0 0;
     font-size: 2.5rem;
     font-weight: 600;
+    letter-spacing: 5px;
 }
 .hr-number-2{
     width: 3rem;
@@ -207,6 +208,9 @@ body{
     .main-container, .new-in-container, .newsletter{
         padding: 2rem !important;
     }
+    .main-container{
+        padding-bottom: 5rem !important;
+    }
     .main-title{
         font-size: 2.5rem;
     }
@@ -217,15 +221,17 @@ body{
         margin-top: 2rem;
     }
     .background-image{
-        position: relative;
+        /* position: relative;
         top: 2rem !important;
-        margin: 0;
+        margin: 0; */
+        display: none;
+
     }
     .see-all-btn{
         margin-top: 2rem;
     }
     .title{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .newsletter-input{
         width: 15rem;
@@ -246,11 +252,12 @@ body{
         margin-top: 3rem;
     }
     .background-image{
-        position: relative;
+        /* position: relative;
         top: 3rem !important;
-        margin: 0;
+        margin: 0; */
+        display: none;
     }
-    .new-in-title{
+    .title{
         font-size: 2rem;
     }
 }
