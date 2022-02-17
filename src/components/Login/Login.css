@@ -1,0 +1,68 @@
+.login-container{
+    width: 30vw;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    color: var(--dark)
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.login-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #080809;
+    margin-bottom: 3rem;
+    font-size: 14px;
+}
+
+.login-label{
+    font-size: 12px;
+}
+
+.login-button{
+    color: var(--bright);
+    width: 12rem;
+    margin: 0 auto;
+    background-color: var(--dark);
+    height: 3rem;
+    margin-top: 2rem;
+}
+
+.login-image{
+    margin-bottom: 2rem;
+}
+
+.haveacc-paragraph{
+    text-align: center;
+    color: #080809d3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.haveacc-paragraph a{
+    cursor: pointer;
+    text-decoration: underline !important;
+    color: #080809d3;
+}
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media screen and (max-width: 767px) { /*ako je 767 ili manje */
+    .login-container{
+        width: 100vw;
+    }
+}
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
+    .login-container{
+        width: 80vw;
+    }
+}

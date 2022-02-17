@@ -23,7 +23,7 @@ function Header() {
                         <Nav.Link href="#" >
                             <img src={SearchIcon} alt='' width='32px' className='px-1'/>
                         </Nav.Link>
-                        <Nav.Link href="#" >
+                        <Nav.Link href="./login" >
                             <img src={AccountIcon} alt='' width='32px' className='px-1'/>
                         </Nav.Link>
                         <Nav.Link href="./shopping-cart" >
