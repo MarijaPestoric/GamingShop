@@ -28,7 +28,7 @@ function ShoppingCart() {
                         <Col className='shopping-cart-desc'>
                             <div>
                                 <p style={{ padding: '0', margin: '0', fontWeight: '600' }}>Name, product ID</p>
-                                <p style={{ fontSize: '14px' }}>15,99$</p>
+                                <p style={{ fontSize: '14px' }}>21,99$</p>
                             </div>
                             <button className='remove-btn'>Remove</button>
                         </Col>
