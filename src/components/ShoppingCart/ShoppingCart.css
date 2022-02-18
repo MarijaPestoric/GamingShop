@@ -95,6 +95,7 @@
     }
     .cart-title{
         font-size: 1.5rem;
+        font-weight: 600;
     }
     
 }
@@ -112,5 +113,6 @@
     }
     .cart-title{
         font-size: 2rem;
+        font-weight: 600;
     }
 }

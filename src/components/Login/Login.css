@@ -46,7 +46,7 @@
     font-weight: 600;
 }
 
-.haveacc-paragraph a{
+.haveacc-paragraph .to-register{
     cursor: pointer;
     text-decoration: underline !important;
     color: #080809d3;

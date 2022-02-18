@@ -1,4 +1,5 @@
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import './Register.css'
 import RegisterImg from '../images/register-img.png'
 function Register() {
@@ -27,7 +28,7 @@ function Register() {
                         <Button className='login-button' variant="dark" type="submit">
                             Register
                         </Button>
-                        <p className="haveacc-paragraph">Already have account? <a href="./login">Login</a></p>
+                        <p className="haveacc-paragraph">Already have account? <Link to="/login">Login</Link></p>
                     </Form>
                 </Col>
             </Row>

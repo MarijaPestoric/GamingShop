@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './Login.css'
 import LoginImage from '../images/login-img.png'
 function Login() {
@@ -15,7 +16,7 @@ function Login() {
                         <Button className='login-button' variant="dark" type="submit">
                             LOGIN
                         </Button>
-                        <p className="haveacc-paragraph">Don't have account? <a href="/register">Register</a></p>
+                        <p className="haveacc-paragraph">Don't have account? <Link className="to-register" to='./register'>Register</Link></p>
                     </Form>
                 </Col>
             </Row>
