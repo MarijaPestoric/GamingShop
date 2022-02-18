@@ -9,31 +9,33 @@ import Logo from '../images/logo.png'
 function Header() {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" style={{backgroundColor: '#EDF2F4'}}>
+            <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#EDF2F4' }}>
                 <Container>
                     <Navbar.Brand href="./"> <img src={Logo} alt='logo' width='200px'></img> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="m-auto" style={{margin: '0'}}>
-                           <Nav.Link href="/" className='main-navlink px-4'>Home</Nav.Link>
+                        <Nav className="m-auto" style={{ margin: '0' }}>
+                            <Nav.Link href="/" className='main-navlink px-4'>Home</Nav.Link>
                             <Nav.Link href="#" className='main-navlink px-4'>Products</Nav.Link>
                             <Nav.Link href="#" className='main-navlink px-4'>About</Nav.Link>
                             <Nav.Link href="#" className='main-navlink px-4'>Contact</Nav.Link>
                         </Nav>
                         <Nav className='search-acc-cart'>
-                        <Nav.Link>
-                            <NavLink to="#" >
-                            <img src={SearchIcon} alt='' width='32px' className='px-1'/>
+                            <NavLink to="#">
+                                <Nav.Link>
+                                    <img src={SearchIcon} alt='' width='32px' className='px-1' />
+                                </Nav.Link>
                             </NavLink>
-                        </Nav.Link>
-                        <Nav.Link>
-                        <NavLink to="/login" >
-                            <img src={AccountIcon} alt='' width='32px' className='px-1'/>
-                        </NavLink>
-                        </Nav.Link>
-                        <NavLink to='/shopping-cart'><Nav.Link href="/shopping-cart" >
-                            <img src={CartIcon} alt='' width='32px' className='px-1'/>
-                        </Nav.Link></NavLink>
+                            <NavLink to="/login">
+                            <Nav.Link href="/login" >
+                                    <img src={AccountIcon} alt='' width='32px' className='px-1' />
+                            </Nav.Link>
+                            </NavLink>
+                            <NavLink to='/shopping-cart'>
+                                <Nav.Link href="/shopping-cart">
+                                    <img src={CartIcon} alt='' width='32px' className='px-1' />
+                                </Nav.Link>
+                            </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

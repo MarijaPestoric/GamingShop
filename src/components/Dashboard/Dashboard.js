@@ -35,7 +35,7 @@ export const data = {
 function Dashboard() {
     return (
         <>
-            <Container style={{ overflow: 'hidden', margin: '0', minWidth: '100%' }}>
+            <Container style={{ overflow: 'hidden', margin: '0', padding:'0', minWidth: '100%' }}>
                 <Row  className='dashboard-container'>
                 <Row style={{ textAlign: 'left' }} lg='12' md='12' sm='12'>
                     <ProSidebar>

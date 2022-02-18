@@ -58,6 +58,10 @@
 @media screen and (max-width: 767px) { /*ako je 767 ili manje */
     .login-container{
         width: 100vw;
+        padding: 1rem;
+    }
+    .login-input{
+        width: 95%;
     }
 }
 
