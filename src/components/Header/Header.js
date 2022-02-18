@@ -27,7 +27,7 @@ function Header() {
                             </NavLink>
                         </Nav.Link>
                         <Nav.Link>
-                        <NavLink to="./login" >
+                        <NavLink to="/login" >
                             <img src={AccountIcon} alt='' width='32px' className='px-1'/>
                         </NavLink>
                         </Nav.Link>
