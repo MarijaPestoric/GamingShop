@@ -15,7 +15,7 @@ function Login() {
                         <Button className='login-button' variant="dark" type="submit">
                             LOGIN
                         </Button>
-                        <p className="haveacc-paragraph">Don't have account? <a href="./register">Register</a></p>
+                        <p className="haveacc-paragraph">Don't have account? <a href="/register">Register</a></p>
                     </Form>
                 </Col>
             </Row>
