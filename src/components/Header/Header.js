@@ -21,11 +21,15 @@ function Header() {
                             <Nav.Link href="#" className='main-navlink px-4'>Contact</Nav.Link>
                         </Nav>
                         <Nav className='search-acc-cart'>
-                        <Nav.Link href="#" >
+                        <Nav.Link>
+                            <NavLink to="#" >
                             <img src={SearchIcon} alt='' width='32px' className='px-1'/>
+                            </NavLink>
                         </Nav.Link>
-                        <Nav.Link href="./login" >
+                        <Nav.Link>
+                        <NavLink to="./login" >
                             <img src={AccountIcon} alt='' width='32px' className='px-1'/>
+                        </NavLink>
                         </Nav.Link>
                         <NavLink to='/shopping-cart'><Nav.Link href="/shopping-cart" >
                             <img src={CartIcon} alt='' width='32px' className='px-1'/>

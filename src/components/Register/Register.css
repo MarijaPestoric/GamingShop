@@ -33,13 +33,13 @@
    }
    .register-form{
     width: 100%;
-}
-.register-input{
+    }
+    .register-input{
     width: 100%;       
-}
-.register-container{
+    }
+    .register-container{
     padding: 1rem 1rem !important;
-}
+    }
 }
 
 /* TABLETS */

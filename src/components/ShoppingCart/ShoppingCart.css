@@ -16,6 +16,7 @@
     text-align: left;
     font-size: 14px;
     width: fit-content;
+    color:#080809;
 }
 
 .remove-btn:hover{
@@ -92,6 +93,9 @@
     .checkout{
         margin-top: 2rem;
     }
+    .cart-title{
+        font-size: 1.5rem;
+    }
     
 }
 
@@ -105,5 +109,8 @@
     }
     .checkout{
         margin-top: 2rem;
+    }
+    .cart-title{
+        font-size: 2rem;
     }
 }
