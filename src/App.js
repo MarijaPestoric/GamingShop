@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register'
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/shopping-cart' component={ShoppingCart}></Route>
         <Route exact path='/dashboard' component={Dashboard}></Route>
         <Route exact path='/login' component={Login}></Route>
+        <Route exact path='/register' component={Register}></Route>
         <Footer />
       </div>
     </BrowserRouter>

@@ -1,0 +1,59 @@
+.register-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    color: var(--dark);
+}
+
+.register-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #080809;
+    margin-bottom: 2rem;
+    font-size: 14px;
+    width: 28rem;
+}
+.register-form{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+
+
+/* RESPONSIVE */
+
+/* MOBILE */
+@media screen and (max-width: 767px) { /*ako je 767 ili manje */
+   .register-image__container{
+       display: none;
+   }
+   .register-form{
+    width: 100%;
+}
+.register-input{
+    width: 100%;       
+}
+.register-container{
+    padding: 1rem 1rem !important;
+}
+}
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
+    .register-image__container{
+        display: none;
+    }
+    .register-form{
+        width: 100%;
+    }
+    .register-input{
+        width: 100%;       
+    }
+    .register-container{
+        padding: 1rem 5rem !important;
+    }
+}
