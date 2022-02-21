@@ -10,9 +10,9 @@ function Login() {
                 <img src={LoginImage} alt="" width='150px' className="login-image"></img>
                     <Form className='login-form'>
                         <label className="login-label" htmlFor="username">Username</label>
-                        <input className='login-input' id="username" type="text"></input>
+                        <input className='login-input form-input' id="username" type="text"></input>
                         <label className="login-label" htmlFor="password">Password</label>
-                        <input className='login-input' id="password" type="password"></input>
+                        <input className='login-input form-input' id="password" type="password"></input>
                         <Button className='login-button' variant="dark" type="submit">
                             LOGIN
                         </Button>

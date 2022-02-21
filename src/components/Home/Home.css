@@ -217,7 +217,8 @@ body{
         padding: 1.5rem !important;
     }
     .main-container{
-        padding-bottom: 5rem !important;
+        padding-bottom: 10rem !important;
+        padding-top: 5rem !important;
     }
     .main-title{
         font-size: 2.5rem;
@@ -278,9 +279,13 @@ body{
 }
 /* TABLETS */
 @media screen and (min-width: 768px) and (max-width: 1023px) { /*ako je 768 ili vise*/
-    .main-container, .new-in-container, .newsletter{
+    .new-in-container, .newsletter{
         padding: 3rem !important;
     }
+    .main-container{
+        padding: 10rem 3rem 8rem 3rem;
+    }
+
     .main-title{
         font-size: 3rem;
     }

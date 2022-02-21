@@ -14,19 +14,19 @@ function Register() {
                     <Form className='register-form'>
                         <h2 className='title' style={{marginBottom: '2rem'}} >Register.</h2>
                         <label className="login-label name-input" htmlFor="first-name">First Name</label>
-                        <input className='register-input' id="first-name" type="text"></input>
+                        <input className='register-input form-input' id="first-name" type="text"></input>
                         <label className="login-label name-input" htmlFor="last-name">Last Name</label>
-                        <input className='register-input' id="last-name" type="text"></input>
+                        <input className='register-input form-input' id="last-name" type="text"></input>
                         <label className="login-label" htmlFor="username">Username</label>
-                        <input className='register-input' id="username" type="text"></input>
+                        <input className='register-input form-input' id="username" type="text"></input>
                         <label className="login-label" htmlFor="username">Email</label>
-                        <input className='register-input' id="username" type="email"></input>
+                        <input className='register-input form-input' id="username" type="email"></input>
                         <label className="login-label" htmlFor="password">Password</label>
-                        <input className='register-input' id="username" type="password"></input>
+                        <input className='register-input form-input' id="username" type="password"></input>
                         <label className="login-label" htmlFor="password">Confirm password</label>
-                        <input className='register-input' id="password" type="password"></input>
+                        <input className='register-input form-input' id="password" type="password"></input>
                         <Button className='login-button' variant="dark" type="submit">
-                            Register
+                            REGISTER
                         </Button>
                         <p className="haveacc-paragraph">Already have account? <Link className='to-register' to="/login">Login</Link></p>
                     </Form>

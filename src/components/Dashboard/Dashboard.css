@@ -1,6 +1,5 @@
 .dashboard-container{
     background-color: var(--bright);
-    padding: 1rem 7rem;
     min-height: 100% !important;
     font-size: 14px;
     position: relative;
@@ -48,6 +47,31 @@
 #dashboard-customers{
     margin-top: 5rem;
 }
+#dashboard-orders{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.button-collapse{
+    width: fit-content;
+    background-color: var(--dark);
+}
+.new-product-dashboard{
+    padding: 2rem;
+    margin: 1rem 0;
+    font-size: 12px;
+    border-top:  2px solid #080809;
+    background-color: rgba(0, 0, 0, 0.05);;
+}
+.new-product-button{
+    width: fit-content;
+    font-size: 12px;
+    background-color: var(--dark);
+}
+.new-product-label{
+    font-weight: 600;
+}
+
 /* RESPONSIVE */
 
 /* MOBILE */
@@ -93,5 +117,8 @@
         padding: 1.5rem 1rem;
         font-size: 2rem;
     }
-
+    .new-product-button{
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
 }
