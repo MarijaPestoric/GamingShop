@@ -12,7 +12,7 @@ import ProductsBrightIcon from '../images/new-product.png'
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
-    labels: ['On delivery', 'Delivered', 'Cancelled'],
+    labels: ['On delivery', 'Delivered'],
     datasets: [
         {
             label: '# of Votes',
