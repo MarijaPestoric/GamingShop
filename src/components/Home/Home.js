@@ -28,16 +28,16 @@ export default function Home() {
                     <hr className="hr-number"></hr> 01.
                     <h2 className='title'>New in shop.</h2>
                     <Row className="mx-auto" style={{marginTop: '2rem'}}>
-                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%'></img></Col>
-                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%'></img></Col>
-                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%'></img></Col>
-                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%'></img></Col>
-                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%'></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%' alt="product"></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%' alt="product"></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%' alt="product"></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%' alt="product"></img></Col>
+                        <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%' alt="product"></img></Col>
                         <Col className='new-in-container__img new-in-container__img-text' lg='4' md='6' sm='12'>
                             Lorem ipsum dolor sit amet, elit amet consectetur adipiscing elit.
                             Lorem ipsum dolor sit amet, elit amet consectetur adipiscing elit.
                             <Button className="see-all-btn" variant="dark" size="lg">
-                                See all <img src={Arrow} className='arrow-for-btn' width='20px'></img>
+                                See all <img src={Arrow} className='arrow-for-btn' width='20px' alt=">"></img>
                             </Button>
                         </Col>
                     </Row>
