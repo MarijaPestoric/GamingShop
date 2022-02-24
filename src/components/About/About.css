@@ -1,0 +1,24 @@
+.team-grid {
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.page-container {
+    padding: 80px 0;
+}
+
+.page-title {
+    margin-bottom: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
