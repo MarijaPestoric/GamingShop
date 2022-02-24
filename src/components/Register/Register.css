@@ -6,11 +6,6 @@
 }
 
 .register-input{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid #080809;
     margin-bottom: 2rem;
     font-size: 14px;
     width: 28rem;
@@ -21,6 +16,13 @@
     flex-direction: column;
     text-align: left;
     margin-bottom: 2rem;
+}
+.form-input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: none;
+    border-bottom: 1px solid #080809;
 }
 
 

@@ -1,4 +1,5 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../Home/Home.css';
 import './ShoppingCart.css';
 import Sample from '../images/sample.jpg'
@@ -34,7 +35,7 @@ function ShoppingCart() {
                         </Col>
                     </Row>
                 </Col>
-                <Col className='checkout' lg='3' md='12' sm='12'>
+                <Col className='checkout-cart' lg='3' md='12' sm='12'>
                     <div>
                         <h3 className='summary-title'>ORDER SUMMARY</h3>
                         <p>Subtotal: <strong className='cart-prices-summary'>37,98$</strong></p>
@@ -42,7 +43,7 @@ function ShoppingCart() {
                         <p style={{ fontWeight: '600' }}>ESTIMATED TOTAL: <strong className='cart-prices-summary'>44,97$</strong></p>
                     </div>
                     <Button className="btn-checkout" variant="dark" size="lg">
-                        CHECKOUT NOW
+                       <Link to='/checkout' style={{color: '#EDF2F4', textDecoration: 'none'}}> CHECKOUT NOW </Link> 
                     </Button>
                 </Col>
             </Row>

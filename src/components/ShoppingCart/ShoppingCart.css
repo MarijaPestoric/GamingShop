@@ -37,7 +37,7 @@
 
 }
 
-.checkout{
+.checkout-cart{
     border: 1px solid #080809;
     border-radius: 10px;
     font-size: 14px;
@@ -90,7 +90,7 @@
     .hr-cart-product{
         width: 15rem;
     }
-    .checkout{
+    .checkout-cart{
         margin-top: 2rem;
     }
     .cart-title{
@@ -108,7 +108,7 @@
     .hr-cart-product{
         width: 25rem;
     }
-    .checkout{
+    .checkout-cart{
         margin-top: 2rem;
     }
     .cart-title{
