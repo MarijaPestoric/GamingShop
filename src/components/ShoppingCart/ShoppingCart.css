@@ -41,7 +41,7 @@
     border: 1px solid #080809;
     border-radius: 10px;
     font-size: 14px;
-    padding: 1.5rem;
+    padding: 1.5rem !important;
     position: relative;
     max-height: 22rem !important;
     display: flex;
