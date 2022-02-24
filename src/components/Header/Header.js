@@ -18,7 +18,7 @@ function Header() {
                             <Nav.Link href="/" className='main-navlink px-4'>Home</Nav.Link>
                             <Nav.Link href="#" className='main-navlink px-4'>Products</Nav.Link>
                             <Nav.Link href="#" className='main-navlink px-4'>About</Nav.Link>
-                            <Nav.Link href="#" className='main-navlink px-4'>Contact</Nav.Link>
+                            <Nav.Link href="/contact" className='main-navlink px-4'>Contact</Nav.Link>
                         </Nav>
                         <Nav className='search-acc-cart'>
                             <NavLink to="#">
