@@ -1,0 +1,54 @@
+.card {
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid darkgray;
+}
+
+.card__bg {
+    height: 150px;
+    background-color: black;
+    border: 8px 8px 0 0;
+}
+
+.card__content {
+    padding: 32px;
+}
+
+.card__img {
+    display: inline-block;
+    margin: -100px auto 0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid black;
+}
+
+.card__fullName {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.card__position {
+    margin-top: 8px;
+    font-size: 18px;
+    color: darkgray;
+}
+
+.card__socials {
+    margin-top: 32px;
+}
+
+.card__socials .social-link:not(:last-child) {
+    margin-right: 16px;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+}
