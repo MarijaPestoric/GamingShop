@@ -49,7 +49,7 @@ body{
 /* BUTTONS */
 
 .btn-shop{
-    background-color: var(--dark);
+    background-color: var(--dark) !important;
     color: var(--bright) !important;
     border: none;
     width: 13rem;
@@ -63,9 +63,9 @@ body{
 }
 
 .btn-second{
-    background-color: var(--bright);
+    background-color: var(--bright) !important;
     color: var(--dark);
-    font-weight: 600;
+    font-weight: 600 !important;
     border: none;
     box-shadow:  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, rgba(46, 50, 53, 0.63) 3px 3px 6px 0px inset;
     width: 13rem;
@@ -98,7 +98,7 @@ body{
     padding: 5rem 7rem;
 }
 
-.hr-number{
+.hr-number-01{
     width: 3rem;
     height: 2px !important;
     border: none;
@@ -137,8 +137,8 @@ body{
 
 
 .see-all-btn, .see-all-btn:hover{
-    background-color: var(--bright);
-    color: var(--dark);
+    background-color: var(--bright) !important;
+    color: var(--dark) !important;
     font-weight: 600;
     box-shadow:  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, rgba(46, 50, 53, 0.63) 3px 3px 6px 0px inset;
     border: none;
@@ -163,7 +163,7 @@ body{
     letter-spacing: 5px;
 }
 .hr-number-2{
-    width: 3rem;
+    width: 3rem !important;
     height: 2px !important;
     border: none;
     position: relative;
@@ -234,10 +234,10 @@ body{
         margin-top: 2rem;
     }
     .btn-shop, .btn-second{
-        width: 8rem;
-        height: 2.5rem;
+        width: 8rem !important;
+        height: 2.5rem !important;
         padding: 0;
-        font-size: 16px;
+        font-size: 16px !important;
     }
     .btn-second{
         margin-left: 0.5rem;
@@ -257,8 +257,8 @@ body{
         width: 8rem;
         height: 2.5rem;
         align-items: center;
-        padding: 0;
-        font-size: 14px;
+        padding: 0 !important;
+        font-size: 14px !important;
     }
     .see-all-btn img{
         width: 14px;

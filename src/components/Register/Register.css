@@ -1,6 +1,6 @@
 .register-container{
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 1rem 2rem;
     color: var(--dark);
 }

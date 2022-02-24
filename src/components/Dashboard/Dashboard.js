@@ -36,7 +36,7 @@ function Dashboard() {
         <>
             <Container style={{ overflow: 'hidden', margin: '0', padding: '0', minWidth: '100%' }}>
                 <Row className='dashboard-container'>
-                    <Row style={{ textAlign: 'left' }} lg='12' md='12' sm='12'>
+                    <Row style={{ textAlign: 'left' }} lg='4' md='12' sm='12'>
                         <ProSidebar>
                             <Menu iconShape="square" style={{ backgroundColor: '#080809' }}>
                                 <h3 className='sidebar-title'>Dashboard.</h3>
@@ -45,7 +45,7 @@ function Dashboard() {
                                 <MenuItem><img src={ProductsBrightIcon} alt='' width='32px'></img><a href='#dashboard-products' style={{ color: '#edf2f4' }}> Products</a></MenuItem>
                             </Menu>
                         </ProSidebar>
-                        <Col className='dashboard-info-container'>
+                        <Col className='dashboard-info-container' lg='9' md='12' sm='12'>
                             <Row lg='4' style={{ marginTop: '.5rem' }}>
                                 <Col>
                                     <h2 className='quantity-dashboard'>132</h2>
@@ -141,7 +141,7 @@ function Dashboard() {
                                     onClick={() => setOpen(!open)}
                                     aria-controls="example-collapse-text"
                                     aria-expanded={open}
-                                    className='button-collapse'
+                                    className='button-collapse new-product-button'
                                     variant="dark"
                                 >
                                     Add New

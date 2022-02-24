@@ -1,7 +1,7 @@
 .dashboard-container{
     background-color: var(--bright);
     min-height: 100% !important;
-    font-size: 14px;
+    font-size: 14px !important;
     position: relative;
 }
 
@@ -55,21 +55,24 @@
 .button-collapse{
     width: fit-content;
     background-color: var(--dark);
+    margin-bottom: 1rem;
 }
 .new-product-dashboard{
     padding: 2rem;
-    margin: 1rem 0;
-    font-size: 12px;
-    border-top:  2px solid #080809;
+    margin: 1rem 0 !important;
+    font-size: 12px !important;
+    border-top: 2px solid #080809;
     background-color: rgba(0, 0, 0, 0.05);;
 }
 .new-product-button{
-    width: fit-content;
-    font-size: 12px;
-    background-color: var(--dark);
+    width: fit-content !important;
+    height: 2.5rem;
+    font-size: 12px !important;
+    background-color: var(--dark) !important;
 }
 .new-product-label{
     font-weight: 600;
+    font-size: 12px !important;
 }
 
 /* RESPONSIVE */
@@ -79,7 +82,7 @@
     .dashboard-container{
         padding: 0 !important;
         width: 100%;
-        margin: 0;
+        margin: 0 !important;
     }
     .pro-sidebar{
         width: 100%;
@@ -105,6 +108,9 @@
         padding: 0.5rem !important;
         width: auto;
     }
+    .dashboard-info-container{
+        padding: 1.5rem !important;
+    }
     .pro-sidebar{
         width: 100%;
         height: fit-content;
@@ -118,7 +124,7 @@
         font-size: 2rem;
     }
     .new-product-button{
-        margin: 0 auto;
-        margin-top: 2rem;
+        margin: 0 auto !important;
+        margin-top: 2rem !important;
     }
 }

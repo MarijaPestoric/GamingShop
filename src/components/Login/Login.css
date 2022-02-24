@@ -1,6 +1,6 @@
 .login-container{
     width: 30vw;
-    margin: 0 auto;
+    margin: 0 auto !important;
     padding: 4rem 1rem;
     color: var(--dark)
 }
@@ -19,13 +19,16 @@
 
 .login-label{
     font-size: 12px;
+    text-align: left;
+    font-weight: 500;
+    margin-top: 0;
 }
 
 .login-button{
-    color: var(--bright);
+    color: var(--bright) !important;
     width: 12rem;
     margin: 0 auto;
-    background-color: var(--dark);
+    background-color: var(--dark) !important;
     height: 3rem;
     margin-top: 2rem;
 }

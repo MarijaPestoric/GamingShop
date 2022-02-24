@@ -25,7 +25,7 @@ export default function Home() {
                     </Col>
                 </Row>
                 <Row className="new-in-container">
-                    <hr className="hr-number"></hr> 01.
+                    <hr className="hr-number-01" style={{width: '3rem'}}></hr> 01.
                     <h2 className='title'>New in shop.</h2>
                     <Row className="mx-auto" style={{marginTop: '2rem'}}>
                         <Col className='new-in-container__img' lg='4' md='6' sm='12'> <img src={Sample} className='new-in-product-image' width='100%' alt="product"></img></Col>
