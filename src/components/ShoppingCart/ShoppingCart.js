@@ -49,7 +49,9 @@ function ShoppingCart() {
                         </Row>
                         <hr className='hr-cart-product'></hr>
                     </>
-                    ))) : "There's no products in shopping-cart"}
+                    ))) : (<><h4 style={{marginBottom: '1rem', padding: '0'}}>There's no products in your cart</h4> <Link to='/products'><Button className="btn-shop" variant="dark" size="lg">
+                    GO SHOPPING
+                </Button></Link></>)}
 
                 </Col>
                 <Col className='checkout-cart' lg='3' md='12' sm='12'>
