@@ -1,0 +1,58 @@
+/* 
+.products_section{
+    padding: 2rem;
+    display: grid;
+    margin-bottom: 40rem;
+  
+} */
+
+.container_1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #EDF2F4;
+  border-top: 2px solid black;
+}
+.products_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-right: none;
+  border-left: none;
+  margin-top: 70px;
+}
+.filter-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border-radius: 30px;
+  margin-top: 9px;
+  margin-left: 10px;
+}
+
+.filter-control {
+  margin-left: 30px;
+}
+
+.filter-item {
+  margin-left: 5px;
+  margin-top: 11px;
+}
+
+.filter-shipping {
+  margin-left: 30px;
+}
+
+.filter-discount {
+  margin-left: 30px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
