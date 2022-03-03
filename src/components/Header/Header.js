@@ -16,7 +16,7 @@ function Header() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="m-auto" style={{ margin: '0' }}>
                             <Nav.Link href="/" className='main-navlink px-4'>Home</Nav.Link>
-                            <Nav.Link href="#" className='main-navlink px-4'>Products</Nav.Link>
+                            <Nav.Link href="/products" className='main-navlink px-4'>Products</Nav.Link>
                             <Nav.Link href="/about" className='main-navlink px-4'>About</Nav.Link>
                             <Nav.Link href="/contact" className='main-navlink px-4'>Contact</Nav.Link>
                         </Nav>
