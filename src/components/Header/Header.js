@@ -11,7 +11,9 @@ function Header() {
         <>
             <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#EDF2F4' }}>
                 <Container>
-                    <Navbar.Brand href="./"> <img src={Logo} alt='logo' width='200px'></img> </Navbar.Brand>
+                    <NavLink to='/'>
+                        <Navbar.Brand href="./"> <img src={Logo} alt='logo' width='200px'></img> </Navbar.Brand>
+                    </NavLink>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="m-auto" style={{ margin: '0' }}>
@@ -29,9 +31,9 @@ function Header() {
                                 </Nav.Link>
                             </NavLink>
                             <NavLink to="/login">
-                            <Nav.Link href="/login" >
+                                <Nav.Link href="/login" >
                                     <img src={AccountIcon} alt='' width='32px' className='px-1' />
-                            </Nav.Link>
+                                </Nav.Link>
                             </NavLink>
                             <NavLink to='/shopping-cart'>
                                 <Nav.Link href="/shopping-cart">

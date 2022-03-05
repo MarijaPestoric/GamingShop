@@ -102,7 +102,7 @@ function ShoppingCart() {
   >
     <Row lg="12" className="cart-container">
       <h2 className="cart-title">Shopping cart.</h2>
-        <h4 style={{marginBottom: '1rem', padding: '0'}}>There are no products in your cart</h4> <Link to='/products' style={{ paddingLeft: '0'}}><Button className="btn-shop" variant="dark" size="lg" >
+        <h4 style={{marginBottom: '1rem', padding: '0'}}>There are no products in your cart</h4> <Link to='/products' style={{ paddingLeft: '0', marginTop: '2rem'}}><Button className="btn-shop" variant="dark" size="lg" >
                     GO SHOPPING
                 </Button></Link>
       </Row>

@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 .main-navlink{
-    text-shadow: 1px 0px #181e209f;
     color: #181e20d0;
     text-decoration: none;
+    font-weight: 600;
 }
 .main-navlink:hover{
     color: var(--dark)
