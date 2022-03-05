@@ -14,14 +14,15 @@ import Products from './components/Products/Products';
 
 function App() {
   return (
+    // <AuthContextProvider>
     <BrowserRouter>
       <div className="App">
         <Header />
         <Route exact path="/" component={Home}></Route>
-        <Route exact path='/shopping-cart' component={ShoppingCart}></Route>
-        <Route exact path='/dashboard' component={Dashboard}></Route>
-        <Route exact path='/login' component={Login}></Route>
-        <Route exact path='/register' component={Register}></Route>
+        <Route path='/shopping-cart' component={ShoppingCart}></Route>
+        <Route path='/dashboard' component={Dashboard}></Route>
+        <Route path='/login' component={Login}></Route>
+        <Route path='/register' component={Register}></Route>
         <Route exact path='/contact' component={Contact}></Route>
         <Route path='/checkout' component={Checkout}></Route>
         <Route exact path="/about" component={About}></Route>
@@ -29,6 +30,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    // {/* </AuthContextProvider> */}
   );
 }
 

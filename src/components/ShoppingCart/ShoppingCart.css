@@ -5,6 +5,8 @@
 .shopping-cart-img{
     border-radius: 10px;
     text-align: center;
+    height: 150px;
+    width: 200px;
 }
 
 .remove-btn{

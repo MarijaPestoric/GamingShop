@@ -91,10 +91,9 @@ function ShoppingCart() {
       </Row>
     </Container>
   ) : (
-      <div style={{padding: '120px 0'}}>
-        <h1>No products in cart yet.</h1>
-        <Link to="/products">Click here to add products</Link>
-    </div>
+      <><h4 style={{marginBottom: '1rem', padding: '0'}}>There's no products in your cart</h4> <Link to='/products'><Button className="btn-shop" variant="dark" size="lg">
+                    GO SHOPPING
+                </Button></Link></>
   );
 }
 

@@ -1,6 +1,7 @@
 import { Container, Row, Col, Nav } from 'react-bootstrap'
 import LogoLight from '../images/logo-light.png'
 import Instagram from '../images/instagram.png'
+import { NavLink } from 'react-router-dom'
 import Facebook from '../images/facebook.png'
 import Linkedin from '../images/linkedin.png'
 import Pinterest from '../images/pinterest.png'
@@ -21,10 +22,10 @@ function Footer() {
                     </Col>
                 </Col>
                 <Col style={{textAlign: 'right'}} className='mt-5 pt-5 footer-navbar' lg='6' md='6' sm='12'>
-                    <Nav.Link href="#" className='footer-nav'>Home</Nav.Link>
-                    <Nav.Link href="#" className='footer-nav'>Products</Nav.Link>
-                    <Nav.Link href="#" className='footer-nav'>About</Nav.Link>
-                    <Nav.Link href="#" className='footer-nav'>Contact</Nav.Link>
+                    <NavLink to="/" className='footer-nav'>Home</NavLink>
+                    <NavLink to="/products" className='footer-nav'>Products</NavLink>
+                    <NavLink to="/about" className='footer-nav'>About</NavLink>
+                    <NavLink to="/contact" className='footer-nav'>Contact</NavLink>
                 </Col>
             </Row>
         </Container>
