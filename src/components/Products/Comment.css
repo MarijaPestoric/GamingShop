@@ -1,0 +1,26 @@
+.comment_1{
+    margin-top: -120px;
+    margin-bottom: 50px;
+}
+.comment{
+    border-bottom: 3px solid #080809;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: #EDF2F4;
+}
+
+label{
+    margin-right: 15px;
+}
+
+button{
+    justify-content: center;
+    padding: 10px;
+    border: 3px solid black;
+    font-size: 23px;
+}
+
+button:hover{
+    background-color: darkgray;
+}

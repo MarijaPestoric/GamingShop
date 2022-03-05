@@ -15,10 +15,12 @@ function Header() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="m-auto" style={{ margin: '0' }}>
+
                             <NavLink to="/" className='main-navlink px-4'>Home</NavLink>
                             <NavLink to="/products" className='main-navlink px-4'>Products</NavLink>
                             <NavLink to="/about" className='main-navlink px-4'>About</NavLink>
                             <NavLink to="/contact" className='main-navlink px-4'>Contact</NavLink>
+
                         </Nav>
                         <Nav className='search-acc-cart'>
                             <NavLink to="#">

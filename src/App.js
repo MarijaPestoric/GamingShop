@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-// import { AuthContextProvider } from "./context/AuthContext";
 import Home from './components/Home/Home';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import Header from './components/Header/Header';
@@ -11,7 +10,7 @@ import Register from './components/Register/Register'
 import Contact from './components/Contact/Contact';
 import Checkout from './components/Checkout/Checkout';
 import About from './components/About/About';
-// import { PrivateRoute } from "./PrivateRoute";
+import Products from './components/Products/Products';
 
 function App() {
   return (
@@ -27,6 +26,7 @@ function App() {
         <Route exact path='/contact' component={Contact}></Route>
         <Route path='/checkout' component={Checkout}></Route>
         <Route exact path="/about" component={About}></Route>
+        <Route exact path="/products" component={Products}></Route>
         <Footer />
       </div>
     </BrowserRouter>

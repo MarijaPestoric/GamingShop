@@ -1,7 +1,6 @@
 import "./Card.css";
 
 const Card = ({ firstName, lastName, photo, position, socials }) => {
-  console.log(firstName, photo);
   return (
     <div className="card">
       <div className="card__bg"></div>
