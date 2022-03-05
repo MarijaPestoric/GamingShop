@@ -3,6 +3,10 @@
 .main-navlink{
     text-shadow: 1px 0px #181e209f;
     color: #181e20d0;
+    text-decoration: none;
+}
+.main-navlink:hover{
+    color: var(--dark)
 }
 
 .search-acc-cart{

@@ -1,3 +1,4 @@
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -67,10 +68,10 @@ export default function Home() {
                     <Row>
                         <Col style={{ textAlign: 'left' }}>
                             <p className="newsletter-label">Enter your email here:</p>
-                            <form>
-                                <input type='text' className="newsletter-input">
+                            <form action={process.env.REACT_APP_MAILCHIMP_URL} method="post" novalidate>
+                                <input  type="email" name="EMAIL" className="newsletter-input">
                                 </input>
-                                <button type="submit" className="newsletter-button">Submit</button>
+                                <button type="submit" value="Subscribe" name="subscribe" className="newsletter-button">Submit</button>
                             </form>
                         </Col>
                     </Row>

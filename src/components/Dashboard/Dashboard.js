@@ -1,42 +1,123 @@
 import { Container, Row, Col, Table, Button, Collapse, Form } from 'react-bootstrap';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import 'react-pro-sidebar/dist/css/styles.css';
 import '../Home/Home.css'
 import './Dashboard.css'
 import PeopleBrightIcon from '../images/people.png'
 import OrdersBrightIcon from '../images/order-delivery.png'
 import ProductsBrightIcon from '../images/new-product.png'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 ChartJS.register(ArcElement, Tooltip, Legend);
-
-export const data = {
-    labels: ['On delivery', 'Delivered'],
-    datasets: [
-        {
-            label: '# of Votes',
-            data: [46, 83],
-            backgroundColor: [
-                '#FF9E00',
-                '#80ED99',
-            ],
-            borderColor: [
-                '#FF9E00',
-                '#80ED99',
-            ],
-
-        },
-    ],
-};
 
 function Dashboard() {
     const [open, setOpen] = useState(false);
+    const [products, setProducts] = useState([])
+    const [customers, setCustomers] = useState([])
+    const [orders, setOrders] = useState([])
+    const [onDelivery, setOnDelivery] = useState([])
+    const [delivered, setDelivered] = useState([])
+    const [productFields, setProductFields] = useState({});
+    useEffect(() => {
+        axios
+            .get("http://localhost:3001/products")
+            .then((res) => {
+                console.log(res.data);
+                setProducts(res.data);
+            })
+            .catch((e) => console.log(e));
+    }, []);
+    useEffect(() => {
+        axios
+            .get("http://localhost:3001/customers")
+            .then((res) => {
+                console.log(res.data);
+                setCustomers(res.data);
+            })
+            .catch((e) => console.log(e));
+    }, []);
+    useEffect(() => {
+        axios
+            .get("http://localhost:3001/orders")
+            .then((res) => {
+                console.log(res.data);
+                setOrders(res.data);
+                const onDelivery = res.data.filter(order => order.status === 'On Delivery');
+                setOnDelivery(onDelivery)
+                const delivered = res.data.filter(order => order.status === 'Delivered');
+                setDelivered(delivered)
+            })
+            .catch((e) => console.log(e));
+    }, []);
+    // data.datasets.data =[onDelivery.length, delivered.length]
+
+    const handleChange = (e) => {
+        console.log(e.target.value)
+        setProductFields({ ...productFields, [e.target.name]: e.target.value });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("TUSAM", productFields)
+        const forPost = productFields;
+        (!forPost.title || !forPost.price || !forPost.description) ? toast.error('You must fill in all the fields!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        }) : ( axios
+            .post("http://localhost:3001/products", forPost)
+            .then(res => {
+                setProducts([...products, forPost])
+                console.log(res.data)
+                console.log(products)
+            })
+            .catch(e => {
+                console.log("Neuspjesno!" + e)
+            })
+            (toast.success('Product added successfully.', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            }))
+           )
+      
+    }
+    const data = {
+        labels: ['On delivery', 'Delivered'],
+        datasets: [
+            {
+                label: '# of Votes',
+                data: [onDelivery.length, delivered.length],
+                backgroundColor: [
+                    '#FF9E00',
+                    '#80ED99',
+                ],
+                borderColor: [
+                    '#FF9E00',
+                    '#80ED99',
+                ],
+
+            },
+        ],
+    };
+
     return (
         <>
             <Container style={{ overflow: 'hidden', margin: '0', padding: '0', minWidth: '100%' }}>
                 <Row className='dashboard-container'>
-                    <Row style={{ textAlign: 'left' }} lg='4' md='12' sm='12'>
+                    <Row style={{ textAlign: 'left' }} lg='6' md='12' sm='12'>
                         <ProSidebar>
                             <Menu iconShape="square" style={{ backgroundColor: '#080809' }}>
                                 <h3 className='sidebar-title'>Dashboard.</h3>
@@ -48,22 +129,26 @@ function Dashboard() {
                         <Col className='dashboard-info-container' lg='9' md='12' sm='12'>
                             <Row lg='4' style={{ marginTop: '.5rem' }}>
                                 <Col>
-                                    <h2 className='quantity-dashboard'>132</h2>
+                                    <h2 className='quantity-dashboard'>{orders.length}</h2>
                                     <p>Total orders</p>
                                 </Col>
                                 <Col>
-                                    <h2 className='quantity-dashboard'>95</h2>
-                                    <p>Total Customers</p>
+                                    <h2 className='quantity-dashboard'>{customers.length}</h2>
+                                    <p>Total Registered Customers</p>
+                                </Col>
+                                <Col>
+                                    <h2 className='quantity-dashboard'>{products.length}</h2>
+                                    <p>Total Products</p>
                                 </Col>
                             </Row>
                             <p className='dashboard-summary-title'>Orders summary.</p>
                             <Row lg='6'>
                                 <Col>
-                                    <h2 className='quantity-dashboard'>46</h2>
+                                    <h2 className='quantity-dashboard'>{onDelivery.length}</h2>
                                     <p>On delivery</p>
                                 </Col>
                                 <Col>
-                                    <h2 className='quantity-dashboard'>83</h2>
+                                    <h2 className='quantity-dashboard'>{delivered.length}</h2>
                                     <p>Delivered</p>
                                 </Col>
                             </Row>
@@ -79,27 +164,19 @@ function Dashboard() {
                                             <th>First Name</th>
                                             <th>Last Name</th>
                                             <th>Email</th>
+                                            <th>City</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>mark@test.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>jacob@test.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Larry</td>
-                                            <td>Bird</td>
-                                            <td>larry@test.com</td>
-                                        </tr>
+                                        {customers.map(customer => (<>
+                                            <tr>
+                                                <td>{customer.id}</td>
+                                                <td>{customer.name}</td>
+                                                <td>{customer.lastName}</td>
+                                                <td>{customer.email}</td>
+                                                <td>{customer.city}</td>
+                                            </tr>
+                                        </>))}
                                     </tbody>
                                 </Table>
                             </Row>
@@ -116,20 +193,16 @@ function Dashboard() {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>11</td>
-                                            <td>03.11.2020.</td>
-                                            <td>12:33AM</td>
-                                            <td>Delivered</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>5</td>
-                                            <td>12.12.2021.</td>
-                                            <td>13:53AM</td>
-                                            <td>Delivered</td>
-                                        </tr>
+                                        {orders.map(order => (<>
+                                            <tr>
+                                                <td>{order.id}</td>
+                                                <td>{order.customerId}</td>
+                                                <td>{order.order_date}</td>
+                                                <td>{order.order_time}</td>
+                                                <td>{order.status}</td>
+                                            </tr>
+                                        </>))}
+
                                     </tbody>
                                 </Table>
                             </Row>
@@ -147,30 +220,21 @@ function Dashboard() {
                                     Add New
                                 </Button>
                                 <Collapse in={open}>
-                                    <Form>
+                                    <Form onSubmit={handleSubmit}>
                                         <Row className='new-product-dashboard'>
                                             <Col>
                                                 <label htmlFor='name' className='new-product-label'>Name</label> <br />
-                                                <input id='name' type='text' className='form-input' />
-                                            </Col>
-                                            <Col>
-                                                <label htmlFor='category' className='new-product-label'>Category</label>  <br />
-                                                <input id='category' type='text' className='form-input' />
-
-                                            </Col>
-                                            <Col>
-                                                <label htmlFor='brand' className='new-product-label'>Brand</label>  <br />
-                                                <input id='brand' type='text' className='form-input' />
+                                                <input id='name' type='text' name="title" value={productFields.title} className='form-input' onChange={handleChange} />
                                             </Col>
                                             <Col>
                                                 <label htmlFor='price' className='new-product-label'>Price</label>  <br />
-                                                <input id='price' type='text' className='form-input' />
+                                                <input id='price' type='text' name="price" value={productFields.price} className='form-input' onChange={handleChange} />
                                             </Col>
-                                            {/* <Col >
-                                                <label htmlFor='price'>Description</label>  <br />
-                                                <textarea maxLength={250} className='form-input' />
-                                            </Col> */}
-                                            <Button className='new-product-button' variant='dark'>Submit</Button>
+                                            <Col>
+                                                <label htmlFor='description' className='new-product-label'>Description</label>  <br />
+                                                <textarea maxLength={250} id='description' name="description" value={productFields.description} className='form-input' onChange={handleChange} />
+                                            </Col>
+                                            <Button className='new-product-button' variant='dark' type="submit">Submit</Button>
                                         </Row>
                                     </Form>
                                 </Collapse>
@@ -178,34 +242,38 @@ function Dashboard() {
                                     <thead>
                                         <tr>
                                             <th>#id</th>
-                                            <th>Category ID</th>
-                                            <th>Brand ID</th>
-                                            <th>Name</th>
+                                            <th>Product name</th>
                                             <th>Price</th>
+                                            <th>Decription</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <th>2</th>
-                                            <th>4</th>
-                                            <td>Keyboard</td>
-                                            <td>23$</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <th>3</th>
-                                            <th>2</th>
-                                            <td>Mouse</td>
-                                            <td>13$</td>
-                                        </tr>
+                                        {products.map(product => (<>
+                                            <tr>
+                                                <td>{product.id}</td>
+                                                <td>{product.title}</td>
+                                                <td>€{product.price}</td>
+                                                <td>{product.description}</td>
+                                            </tr>
+                                        </>))}
                                     </tbody>
                                 </Table>
                             </Row>
                         </Col>
                     </Row>
                 </Row>
-
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme='dark'                    
+                />
             </Container>
         </>
     );
